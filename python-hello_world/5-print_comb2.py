@@ -1,5 +1,5 @@
 i = 0
 while i < 100:
-    print ( i, end= ", ")
+    print (end= "{}, ".format(i))
     i= i+1
     
