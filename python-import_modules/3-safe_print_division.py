@@ -8,11 +8,11 @@ def safe_print_division(a, b):
          result = 'None'
         
          print("{:d} / {:d} = {}".format(a,b,result))
-    else:
-         print("{:d} / {:d} = {}".format(a, b, result))
     finally:
         print("Inside result: {}".format(result))
 
-       
+    
+
+safe_print_division(10, 2)
 
 
