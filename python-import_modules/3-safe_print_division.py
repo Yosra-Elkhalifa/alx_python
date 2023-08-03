@@ -6,15 +6,16 @@ def safe_print_division(a, b):
         # Division by zero exception
         
     except ZeroDivisionError:
-            result = None
+            if b == 0:
+                result = None
     finally:
         print("Inside result: {}".format(result))
 
     
 
-a = 10
-b = 0    
-safe_print_division(a,b)
+# a = 10
+# b = 0    
+# safe_print_division(a,b)
 
 
 
