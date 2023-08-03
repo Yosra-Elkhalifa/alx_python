@@ -12,6 +12,6 @@ def safe_print_division(a, b):
 
     
 
-safe_print_division(2, 0)
+
 
 
