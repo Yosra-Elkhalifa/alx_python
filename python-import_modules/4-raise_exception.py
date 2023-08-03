@@ -5,4 +5,3 @@ def raise_exception():
         print("Exception has been raised")
 
 
-raise_exception()
