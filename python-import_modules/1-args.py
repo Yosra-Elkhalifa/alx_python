@@ -7,14 +7,14 @@ def main():
     if num_arguments < 1:
         print("{} arguments.".format(num_arguments))
     elif num_arguments == 1:
-        print("{} argument.".format(num_arguments))
+        print("{} argument:".format(num_arguments))
     else:
         print("{} arguments:".format(num_arguments))
 
     # print list content
     counter = 1
     for arg in argv:
-        print("{} : {}".format(counter, arg))
+        print("{}: {}".format(counter, arg))
         counter += 1
 
 
