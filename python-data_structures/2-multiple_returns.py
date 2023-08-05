@@ -4,7 +4,9 @@ def multiple_returns(sentence):
         first = None
     else:
         first = sentence[0]
-    print("Length: {:d} - First character: {}".format(len(sentence), first_char))
+    return len(sentence) , first
+    print("Length: {:d} - First character: {}".format(len(sentence), first))
+
 
 
 
