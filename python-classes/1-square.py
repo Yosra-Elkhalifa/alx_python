@@ -8,6 +8,8 @@ class Square:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
+        else:
+            return size
 
 Square.__doc__ = """ A class that defines a square by """
 
