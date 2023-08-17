@@ -1,5 +1,5 @@
 """
-This is module docstring for zero squre task
+This is module docstring for size validation task
 """
 class Square:
     __size = None
