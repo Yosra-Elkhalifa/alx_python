@@ -9,18 +9,15 @@ class Square:
         """Getter function"""
         @property
         def size(self):
-            print("Getter function called")
-            return size
+            return self.__size
         """Setter function"""
         @size.setter
         def size(self, value):
+            if size != int(size):
+                raise TypeError("size must be an integer")
+            elif size < 0:
+                raise ValueError("size must be >= 0")
             self.__size = value
-            print("setter function called")
-        
-        if size != int(size):
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
     def area(self):
         """Area of square function"""
         return self.__size ** 2
