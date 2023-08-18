@@ -2,7 +2,7 @@
 This is module docstring for size validation task..
 """
 class Square:
-    __size = None
+   
     def __init__(self, size = 0):
         """Method to instantiate an object"""
         self.__size = size
@@ -15,7 +15,7 @@ class Square:
         def size(self, value):
             if size != int(value):
                 raise TypeError("size must be an integer")
-            elif size < 0:
+            elif value < 0:
                 raise ValueError("size must be >= 0")
             self.__size = value
     def area(self):
