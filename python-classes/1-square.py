@@ -8,10 +8,10 @@ class Square:
                 self.__size = size
         
             except TypeError:
-                if not isinstance(int,size):
+                #if not isinstance(int,size):
                     raise TypeError ("size must be an integer")
             except ValueError:
-                if size < 0:
+                #if size < 0:
                     raise ValueError("size must be >= 0")
 
            
