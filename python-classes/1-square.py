@@ -2,25 +2,11 @@
 This is module docstring for size validation task..
 """
 class Square:
-    """Class Square"""
-    __size = None
     def __init__(self, size = 0):
-            """Create an instance of class Squre"""
-            try:
-                self.__size = size
-                
-            except TypeError:
-                if size != int(size):
-                    print ("size must be an integer")
-            except ValueError:
-                if size < 0:
-                    print ("size must be >= 0")
-          
-
+        self.__size = size
+        if size != int(size):
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
         
-       
-
-
-
-
-
+Square.__doc__ = """ A class that defines a square by """
