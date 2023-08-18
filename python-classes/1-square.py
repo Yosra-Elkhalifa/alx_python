@@ -9,9 +9,11 @@ class Square:
             raise TypeError
             raise ValueError
         except TypeError:
-            print("size must be an integer")
+            if not isinstance(int,size):
+                print("size must be an integer")
         except ValueError:
-            print("size must be >= 0")
+            if size < 0:
+                print("size must be >= 0")
 
            
        
