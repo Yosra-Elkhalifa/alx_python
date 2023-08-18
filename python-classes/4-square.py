@@ -27,7 +27,8 @@ class Square:
             print()
         for i in range(0,self.__size):
             for j in range(0,self.__size):
-                print("#")
+                print("#", end="")
+            print()
         
         
 Square.__doc__ = """ A class that defines a square by """
