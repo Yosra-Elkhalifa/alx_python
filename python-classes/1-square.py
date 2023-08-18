@@ -3,15 +3,16 @@ This is module docstring for size validation task..
 """
 class Square:
     __size = None
-    try:
-        def __init__(self, size = 0):
-            self.__size = size
-    except TypeError:
-            if  not isinstance(int,__size):
-                raise TypeError("size must be an integer")
-    except ValueError:
-            if __size < 0:
-                raise ValueError("size must be >= 0")
+    def __init__(self, size = 0):
+        self.__size = size
+        try:
+            raise TypeError
+            raise ValueError
+        except TypeError:
+            print("size must be an integer")
+        except ValueError:
+            print("size must be >= 0")
+
            
        
 
