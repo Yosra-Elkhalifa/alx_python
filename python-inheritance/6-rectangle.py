@@ -43,7 +43,11 @@ class Rectangle(BaseGeometry):
     """
     def __init__(self, width, height):
         """
-        A class that instantiate with width and height
+        Instantiate with width and height
         """
         self.__width = width
         self.__height = height
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
+
+
