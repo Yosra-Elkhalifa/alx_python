@@ -50,8 +50,8 @@ class Rectangle(BaseGeometry):
         """
         A public method that return area of rectangle
         """
-        return self.height * self.width
+        return self.__height * self.__width
     def __str__(self):
-        return ("[Rectangle] {}/{}".format(self.width,self.height))
+        return ("[Rectangle] {}/{}".format(self.__width,self.__height))
 
 
