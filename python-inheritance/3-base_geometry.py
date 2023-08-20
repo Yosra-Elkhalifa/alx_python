@@ -1,8 +1,22 @@
 """
-A module that has an empty class
+A module that have an empty class with override to dir() method
 """
-class BaseGeometry:
+
+
+class MetaClass(type):
     """
-    An empty class named BaseGeometry
+    Override dir() method to execlude __init__subclass__
     """
-    pass
+    def __dir__(cls):
+        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
+
+
+class BaseGeometry(metaclass=MetaClass):
+    """
+    BaseGeometry class that uses the overriden dir() method 
+    """
+    
+    def __dir__(cls):
+        return [attribute for attribute in super().__dir__() if attribute != '__init_subclass__']
+    
+
