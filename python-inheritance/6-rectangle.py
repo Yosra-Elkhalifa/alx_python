@@ -36,7 +36,7 @@ class BaseGeometry(metaclass=MetaClass):
         elif value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
         
-    BaseGeometry = __import__('5-base_geometry').BaseGeometry
+BaseGeometry = __import__('5-base_geometry').BaseGeometry
 
         
 class Rectangle(BaseGeometry):
