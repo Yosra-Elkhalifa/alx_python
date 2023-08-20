@@ -32,7 +32,7 @@ class BaseGeometry(metaclass=MetaClass):
         - If value is less or equal to 0: raise a ValueError exception with the 
          message <name> must be greater than 0
         """
-        if isinstance(value, int):
+        if not isinstance(value, int):
             raise TypeError("{} must be an integer".format(name))
         elif value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
