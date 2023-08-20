@@ -53,6 +53,8 @@ class Rectangle(BaseGeometry):
         return self.__height * self.__width
     def __str__(self):
         return ("[Rectangle] {}/{}".format(self.__width,self.__height))
+    
+Rectangle = __import__('7-rectangle').Rectangle
 
 class Square(Rectangle):
     """
