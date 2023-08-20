@@ -2,7 +2,6 @@
 A module that have an empty class with override to dir() method
 """
 
-
 class MetaClass(type):
     """
     Override dir() method to execlude __init__subclass__
@@ -36,6 +35,9 @@ class BaseGeometry(metaclass=MetaClass):
             raise TypeError("{} must be an integer".format(name))
         elif value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
+        
+    BaseGeometry = __import__('5-base_geometry').BaseGeometry
+
         
 class Rectangle(BaseGeometry):
     """
