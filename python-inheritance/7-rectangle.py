@@ -38,8 +38,6 @@ class Rectangle(BaseGeometry):
     """
     A class that inherits from BaseGeometry
     """
-    __width = None
-    __height = None
     def __init__(self, width, height):
         """
         Instantiate with width and height
@@ -52,7 +50,7 @@ class Rectangle(BaseGeometry):
         """
         A public method that return area of rectangle
         """
-        return self.__height * self.__width
+        return self.height * self.width
     def __str__(self):
         return ("[Rectangle] {}/{}".format(self.width,self.height))
 
