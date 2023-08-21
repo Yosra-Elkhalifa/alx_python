@@ -5,7 +5,7 @@ that has a class Rectangle that inherits from Base
 - Class constructor: 
 
 """
-from models.base import Base
+from base import Base
 
 class Rectangle(Base):
     """
@@ -31,7 +31,7 @@ class Rectangle(Base):
         """
         Width getter method
         """
-        return self.width
+        return self.__width
     @width.setter
     def width(self, value):
         """
@@ -43,7 +43,7 @@ class Rectangle(Base):
         """
         Height getter method
         """
-        return self.height
+        return self.__height
     @height.setter
     def height(self, value):
         """
@@ -56,7 +56,7 @@ class Rectangle(Base):
         """
         Argument x getter method
         """
-        return self.x
+        return self.__x
     @x.setter
     def x(self, value):
         """
@@ -68,12 +68,15 @@ class Rectangle(Base):
         """
         Argument y getter method
         """
-        return self.y
+        return self.__y
     @y.setter
     def y(self, value):
         """
         Argument y setter method
         """
         self.__y = value
+
+r = Rectangle(12, 14, 4, 5, 10)
+print(r.width)
 
     
