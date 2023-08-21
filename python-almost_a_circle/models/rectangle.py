@@ -53,7 +53,7 @@ class Rectangle(Base):
         """
         A method that validates x
         """
-        if type(self.__x) != 'int':
+        if not isinstance(self.__x,int):
             raise TypeError("x must be an integer")
         elif self.__x < 0:
             raise ValueError("x must be > 0")
@@ -62,7 +62,7 @@ class Rectangle(Base):
         """
         A method that validates y
         """
-        if type(self.__y) != 'int':
+        if not isinstance(self.__x,int):
             raise TypeError("y must be an integer")
         elif self.__y < 0:
             raise ValueError("y must be > 0")
