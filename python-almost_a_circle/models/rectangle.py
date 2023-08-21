@@ -75,16 +75,16 @@ class Rectangle(Base):
         """
         return self.__width
     @width.setter
-    def width(self, value):
+    def width(self, width):
         """
         Width setter method
         Validates that the input is inteager and greater than zero
         """
-        if type(value) != 'int':
+        if type(width) != 'int':
             raise TypeError("width must be an integer")
-        elif value <= 0:
+        elif width <= 0:
             raise ValueError("width must be > 0")
-        self.__width = value
+        self.__width = width
     @property
     def height(self):
         """
@@ -92,16 +92,16 @@ class Rectangle(Base):
         """
         return self.__height 
     @height.setter
-    def height(self, value):
+    def height(self, height):
         """
         Height setter method
         Validates that the input is inteager and greater than zero
         """
-        if type(value) != 'int':
+        if type(height) != 'int':
             raise TypeError("height must be an integer")
-        elif value <= 0:
+        elif height <= 0:
             raise ValueError("height must be > 0")
-        self.__height = value
+        self.__height = height
 
     @property
     def x(self):
