@@ -21,5 +21,3 @@ class Base:
         else:
             id = self.__nb_objects + 1
             
-b = Base()
-print(b.id)
