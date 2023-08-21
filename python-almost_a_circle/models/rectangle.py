@@ -22,8 +22,8 @@ class Rectangle(Base):
         Validates arguments accordingly 
         """
         super().__init__(id)
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
         self.x = x
         self.y = y
         self.validate_width()
@@ -35,18 +35,18 @@ class Rectangle(Base):
         """
         A method that validates width
         """
-        if type(self.__width) != 'int':
+        if not isinstance(self.width,int):
             raise TypeError("width must be an integer")
-        elif self.__width <= 0:
+        elif self.width <= 0:
             raise ValueError("width must be > 0")
     
     def validate_height(self):
         """
         A method that validates height
         """
-        if type(self.__height) != 'int':
+        if not isinstance(self.height,int):
             raise TypeError("height must be an integer")
-        elif self.__height <= 0:
+        elif self.height <= 0:
             raise ValueError("height must be > 0")
     
     def validate_x(self):
