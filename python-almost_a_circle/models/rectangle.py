@@ -22,34 +22,10 @@ class Rectangle(Base):
         Validates arguments accordingly 
         """
         super().__init__(id)
-        # width validation
-        # if type(width) != 'int':
-        #     raise TypeError("width must be an integer")
-        # elif width <= 0:
-        #     raise ValueError("width must be > 0")
-        # else:
         self.width = width
-        # height validation
-        if type(height) != 'int':
-            raise TypeError("height must be an integer")
-        elif height <= 0:
-            raise ValueError("height must be > 0")
-        else:
-            self.height = height
-        # x validation
-        if type(x) != 'int':
-            raise TypeError("x must be an integer")
-        elif x < 0:
-            raise ValueError("x must be >= 0")
-        else:
-            self.x = x
-        # y validation
-        if type(y) != 'int':
-            raise TypeError("y must be an integer")
-        elif y < 0:
-            raise ValueError("y must be >= 0")
-        else:
-            self.y = y
+        self.height = height
+        self.x = x
+        self.y = y
 
 
     @property
