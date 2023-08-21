@@ -5,7 +5,7 @@ that has a class Rectangle that inherits from Base
 - Class constructor: 
 
 """
-from base import Base
+from models.base import Base
 
 class Rectangle(Base):
     """
