@@ -18,13 +18,39 @@ class Rectangle(Base):
     """
     def __init__(self, width, height, x=0, y=0, id=None):
         """
-        A constructor method to instatiate instances 
+        A constructor method to instatiate instances with arguments 
+        Validates arguments accordingly 
         """
         super().__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        # width validation
+        if width != int(width):
+            raise TypeError("width must be an integer")
+        elif width <= 0:
+            raise ValueError("width must be > 0")
+        else:
+            self.width = width
+        # height validation
+        if height != int(height):
+            raise TypeError("height must be an integer")
+        elif height <= 0:
+            raise ValueError("height must be > 0")
+        else:
+            self.height = height
+        # x validation
+        if x != int(x):
+            raise TypeError("x must be an integer")
+        elif x < 0:
+            raise ValueError("x must be >= 0")
+        else:
+            self.x = x
+        # y validation
+        if y != int(y):
+            raise TypeError("y must be an integer")
+        elif y < 0:
+            raise ValueError("y must be >= 0")
+        else:
+            self.y = y
+
 
     @property
     def width(self):
@@ -36,7 +62,12 @@ class Rectangle(Base):
     def width(self, value):
         """
         Width setter method
+        Validates that the input is inteager and greater than zero
         """
+        if value != int(value):
+            raise TypeError("width must be an integer")
+        elif value <= 0:
+            raise ValueError("width must be > 0")
         self.__width = value
     @property
     def height(self):
@@ -48,32 +79,47 @@ class Rectangle(Base):
     def height(self, value):
         """
         Height setter method
+        Validates that the input is inteager and greater than zero
         """
+        if value != int(value):
+            raise TypeError("height must be an integer")
+        elif value <= 0:
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @property
     def x(self):
         """
-        Argument x getter method
+        Attributet x getter method
         """
         return self.__x
     @x.setter
     def x(self, value):
         """
-        Argument x setter method
+        Attribute x setter method
+        Validates that the input is inteager and greater than or equals zero
         """
+        if value != int(value):
+            raise TypeError("x must be an integer")
+        elif value < 0:
+            raise ValueError("x must be >= 0")
         self.__x = value
     @property
     def y(self):
         """
-        Argument y getter method
+        Attribute y getter method
         """
         return self.__y
     @y.setter
     def y(self, value):
         """
-        Argument y setter method
+        Attribute y setter method
+        Validates that the input is inteager and greater than or equals zero
         """
+        if value != int(value):
+            raise TypeError("y must be an integer")
+        elif value < 0:
+            raise ValueError("y must be >= 0")
         self.__y = value
 
 
