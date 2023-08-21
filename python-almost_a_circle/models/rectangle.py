@@ -23,12 +23,12 @@ class Rectangle(Base):
         """
         super().__init__(id)
         # width validation
-        if type(width) != 'int':
-            raise TypeError("width must be an integer")
-        elif width <= 0:
-            raise ValueError("width must be > 0")
-        else:
-            self.width = width
+        # if type(width) != 'int':
+        #     raise TypeError("width must be an integer")
+        # elif width <= 0:
+        #     raise ValueError("width must be > 0")
+        # else:
+        self.width = width
         # height validation
         if type(height) != 'int':
             raise TypeError("height must be an integer")
