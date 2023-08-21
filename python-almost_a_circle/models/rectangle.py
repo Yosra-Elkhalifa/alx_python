@@ -76,7 +76,6 @@ class Rectangle(Base):
         """
         self.__y = value
 
-r = Rectangle(12, 14, 4, 5, 10)
-print(r.width)
+
 
     
