@@ -16,8 +16,10 @@ class Base:
         """
         A class constructor with argument id
         """
-        if id != 0:
+        if id is not None:
             self.id = id 
         else:
             id = self.__nb_objects + 1
             
+b = Base()
+print(b.id)
