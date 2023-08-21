@@ -22,10 +22,10 @@ class Rectangle(Base):
         Validates arguments accordingly 
         """
         super().__init__(id)
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
 
     @property
@@ -50,7 +50,7 @@ class Rectangle(Base):
         """
         Height getter method
         """
-        return self.__height
+        return self.__height 
     @height.setter
     def height(self, value):
         """
