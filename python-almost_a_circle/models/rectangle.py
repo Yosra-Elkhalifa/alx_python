@@ -77,7 +77,9 @@ class Rectangle(Base):
         """Method that prints in stdout the rectangle with the character #"""
         for height in range(0,self.__height):
             for width in range(0,self.__width):
-                print("#", end="")
+                for x in range(0,self.__x):
+                    for y in range(0,self.__y):
+                        print("#", end="")
             print()
     def __str__(self):
         """
