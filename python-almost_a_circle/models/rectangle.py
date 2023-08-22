@@ -101,11 +101,11 @@ class Rectangle(Base):
         5th argument should be the y attribute
         """
         for arg in args:
-            arg = self.id
-            arg = self.width
-            arg = self.height
-            arg = self.x
-            arg = self.y
+            arg_1 = self.id
+            arg_2 = self.width
+            arg_3 = self.height
+            arg_4 = self.x
+            arg_5 = self.y
 
 
     @property
