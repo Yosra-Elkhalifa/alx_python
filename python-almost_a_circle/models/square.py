@@ -12,11 +12,9 @@ class Square(Rectangle):
         """
         A constructor class with Rectangle arguments
         """
-        super().__init__(id)
-        super().__init__(x)
-        super().__init__(y)
-        self.size = super().__init__(self.width)
-        self.size = super().__init__(self.height)
+        super().__init__(id, size, size,x,y)
+        # self.size = super().__init__(self.width)
+        # self.size = super().__init__(self.height)
         self.validate_width()
         self.validate_height()
         self.validate_x()
@@ -29,3 +27,6 @@ class Square(Rectangle):
         """
         return "[Square] ({}) {}/{} - {}/{}".format(self.id,self.__x,self.__y,self.__width)
 
+
+s = Square(5)
+print(s)
