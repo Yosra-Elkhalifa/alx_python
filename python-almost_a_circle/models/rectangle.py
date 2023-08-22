@@ -100,7 +100,7 @@ class Rectangle(Base):
         4th argument should be the x attribute
         5th argument should be the y attribute
         """
-        for key,value in kwargs:
+        for key,value in kwargs.items():
             if args != 0:
                 break
             elif key == 'id':
