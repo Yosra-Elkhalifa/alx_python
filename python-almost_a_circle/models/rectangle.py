@@ -102,7 +102,7 @@ class Rectangle(Base):
         """
         for key,value in kwargs:
             if args is not None:
-                break
+                continue
             elif key == 'id':
                 self.id = value
             elif key == 'width':
@@ -113,7 +113,7 @@ class Rectangle(Base):
                 self.__x = value
             elif key == 'y':
                 self.__y = value 
-                
+
         if len(args) == 1:
             self.id = args[0]
         elif len(args) == 2:
