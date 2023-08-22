@@ -15,10 +15,10 @@ class Square(Rectangle):
         super().__init__(id, size, size,x,y)
         # self.size = super().__init__(self.width)
         # self.size = super().__init__(self.height)
-        self.validate_width()
-        self.validate_height()
-        self.validate_x()
-        self.validate_y()
+        # self.validate_width()
+        # self.validate_height()
+        # self.validate_x()
+        # self.validate_y()
 
     def __str__(self):
         """
