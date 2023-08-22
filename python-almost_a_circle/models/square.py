@@ -20,7 +20,7 @@ class Square(Rectangle):
         # self.validate_x()
         # self.validate_y()
 
-    def __str__(self):
+    def __str__(self) -> str:
         """
         A method that  overriding the __str__ method so that it returns 
         [Square] (<id>) <x>/<y> - <size>
