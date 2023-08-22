@@ -101,8 +101,8 @@ class Rectangle(Base):
         5th argument should be the y attribute
         """
         for key,value in kwargs:
-            if args is not None:
-                continue
+            if args != 0:
+                break
             elif key == 'id':
                 self.id = value
             elif key == 'width':
