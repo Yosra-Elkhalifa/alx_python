@@ -66,6 +66,12 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         elif self.__y < 0:
             raise ValueError("y must be >= 0")
+    
+    def area(self):
+        """
+        A method that returns the area of rectangle
+        """
+        return self.__height * self.__width
 
 
     @property
