@@ -25,6 +25,6 @@ class Square(Rectangle):
         A method that  overriding the __str__ method so that it returns 
         [Square] (<id>) <x>/<y> - <size>
         """
-        return "[Square] ({}) {}/{} - {}/{}".format(self.id,self.__x,self.__y,self.__width)
+        return "[Square] ({}) {}/{} - {}/{}".format(self.id,self.x,self.y,self.width)
 
 
