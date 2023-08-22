@@ -101,15 +101,15 @@ class Rectangle(Base):
         5th argument should be the y attribute
         """
         if len(args) >= 1:
-            self.id = [0]
+            self.id = args[0]
         elif len(args) >= 2:
-            self.width = [1]
+            self.width = args[1]
         elif len(args) >= 3:
-            self.height = [2]
+            self.height = args[2]
         elif len(args) >= 4:
-            self.x =[3]
+            self.x = args[3]
         elif len(args) >= 5:
-            self.y = [4]
+            self.y = args[4]
     
         
 
