@@ -75,10 +75,10 @@ class Rectangle(Base):
     
     def display(self):
         """Method that prints in stdout the rectangle with the character #"""
-        for space in range(0,self.__x):
+        for space in range(0,self.__y):
             print()
         for height in range(0,self.__height):
-            for y in range(0,self.__y):
+            for x in range(0,self.__x):
                 print("\t")
             for width in range(0,self.__width):
                     
