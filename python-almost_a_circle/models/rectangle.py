@@ -78,7 +78,7 @@ class Rectangle(Base):
         for space in range(0,self.__y):
             print()
         for height in range(0,self.__height):
-            for x in range(0,self.__x):
+            for tab in range(0,self.__x):
                 print("\t")
             for width in range(0,self.__width):
                     
