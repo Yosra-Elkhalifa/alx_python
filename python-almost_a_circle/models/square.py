@@ -12,7 +12,7 @@ class Square(Rectangle):
         """
         A constructor class with Rectangle arguments
         """
-        super().__init__(id, size, size,x,y)
+        super().__init__(size, size,x,y,id)
         # self.size = super().__init__(self.width)
         # self.size = super().__init__(self.height)
         # self.validate_width()
