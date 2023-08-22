@@ -100,12 +100,18 @@ class Rectangle(Base):
         4th argument should be the x attribute
         5th argument should be the y attribute
         """
-        for arg in args:
-            arg_1 = self.id
-            arg_2 = self.width
-            arg_3 = self.height
-            arg_4 = self.x
-            arg_5 = self.y
+        if len(args) < 1:
+            self.id = [0]
+        elif len(args) == 1:
+            self.width = [1]
+        elif len(args) == 2:
+            self.height = [2]
+        elif len(args) == 3:
+            self.x =[3]
+        elif len(args) == 4:
+            self.y = [4]
+    
+        
 
 
     @property
