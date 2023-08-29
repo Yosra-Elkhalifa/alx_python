@@ -31,6 +31,7 @@ def c_text(text):
         
     return "C {}".format(text)
 @app.route("/python/<text>")
+@app.route("/python/")
 def python_text(text = "is cool"):
     """
     A function that returns specifid string when routing to /python/<Text>
