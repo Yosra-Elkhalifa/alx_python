@@ -40,14 +40,14 @@ def python_text(text = "is cool"):
         text = text.replace("_"," ")
         
     return "Python {}".format(text)
-@app.route("/number/<n>")
+@app.route("/number/<int:n>")
 @app.route("/number/")
 def python_number(n):
     """
     A function that returns specifid string when routing to /number/<n>
     """
-    if isinstance(n, int):
-        return "{} is a number".format(n)
+    
+    return "{} is a number".format(n)
 
 
 if __name__ == "__main__":
