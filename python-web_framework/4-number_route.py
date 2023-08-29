@@ -41,7 +41,6 @@ def python_text(text = "is cool"):
         
     return "Python {}".format(text)
 @app.route("/number/<int:n>")
-@app.route("/number/")
 def python_number(n):
     """
     A function that returns specifid string when routing to /number/<n>
