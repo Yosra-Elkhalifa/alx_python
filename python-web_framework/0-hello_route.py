@@ -12,7 +12,7 @@ def hello_HBNB():
     """
     A function that returns specified string when routing to /
     """
-    return " Hello HBNB!"
+    return "Hello HBNB!"
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0",port="5000")
