@@ -27,7 +27,8 @@ def c_text(text):
     A function that returns specifid string when routing to /c/<Text>
     """
     for _ in text:
-        text.replace("_"," ")
+        text = text.replace("_"," ")
+        
     return "C {}".format(text)
 
 if __name__ == "__main__":
