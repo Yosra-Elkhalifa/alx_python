@@ -54,7 +54,7 @@ def number_template(n):
     A function that returns specifid string when routing to /number/<n>
     """
     
-    return render_template('5-number.html', n)
+    return "<h1>{}</h1>".format(render_template('5-number.html', n = n))
 
 
 if __name__ == "__main__":
