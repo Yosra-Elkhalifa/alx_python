@@ -17,5 +17,5 @@ password = sys.argv[2]
 payload = (username,password)
 
 req = requests.get("https://docs.github.com/en/rest/users", auth= payload)
-print(req.json("id"))
+print(req.json["id"])
 
