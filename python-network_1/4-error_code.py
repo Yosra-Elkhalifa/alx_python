@@ -14,3 +14,5 @@ req = requests.get(url)
 req_status_code = req.status_code
 if req_status_code >= 400:
     print("Error code:", req_status_code)
+else:
+    print("Regular request")
