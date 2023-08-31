@@ -22,11 +22,13 @@ else:
 
 payload = {'q':q}
 req = requests.post("http://0.0.0.0:5000/search_user", data = payload)
-if req.status_code == 200 and print(req.raise_for_status) == "None":
-    print("[{}] {}".format(req.json["id"], req.json["name"]))
-elif req.json()== None:
-    print("No result")
-else:
+try:
+    req_json = req.json()
+    if req_json:
+        print("[{}] {}".format(req_json["id"], req_json["name"]))
+    else:
+        print("No result")
+except ValueError:
     print("Not a valid JSON")
        
 
