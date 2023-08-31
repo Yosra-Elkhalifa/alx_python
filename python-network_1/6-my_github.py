@@ -16,8 +16,8 @@ password = sys.argv[2]
 
 
 req = requests.get("https://api.github.com/user", auth= (username,password))
-req_json = req.json()
-if req_json["id"] is not None:
+if req.status_code == 200:
+    req_json = req.json()
     req_id = req_json["id"]
     print(req_id)
 else:
