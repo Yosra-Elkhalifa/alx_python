@@ -9,7 +9,7 @@ import sys
 #if __name__ == "__main__":
 url = sys.argv[1]
 req = requests.get(url)
-x_req = req.headers.get['X-Request-Id']
+x_req = req.headers.get('X-Request-Id')
 if x_req is not None:
         print(x_req)
 else:
