@@ -21,7 +21,7 @@ else:
 
 if type(q) == 'str':
     payload = {'q':q}
-    req = requests.post("http://0.0.0.0:5000/search_user", data =q)
+    req = requests.post("http://0.0.0.0:5000/search_user", data = payload)
     if req.status_code == 200 and print(req.raise_for_status) == "None":
         print("[]",req.json["id"], req.json["name"])
     elif print(req.raise_for_status) != "None":
