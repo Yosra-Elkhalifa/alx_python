@@ -14,9 +14,8 @@ import sys
 username = sys.argv[1]
 password = sys.argv[2]
 
-payload = (username,password)
 
-req = requests.get("https://docs.github.com/en/rest/users", auth= payload)
+req = requests.get("https://docs.github.com/en/rest/users", auth= (username,password))
 req_id = req.json["id"]
 print(req_id)
 
