@@ -19,14 +19,14 @@ if len(sys.argv) > 1:
 else:
     q= ""
 
-if type(q) == 'str':
-    payload = {'q':q}
-    req = requests.post("http://0.0.0.0:5000/search_user", data = payload)
-    if req.status_code == 200 and print(req.raise_for_status) == "None":
-        print("[{}] {}".format(req.json["id"], req.json["name"]))
-    elif print(req.raise_for_status) != "None":
-        print("Not a valid JSON")
-    elif req.json()== None:
-        print("No result")
+
+payload = {'q':q}
+req = requests.post("http://0.0.0.0:5000/search_user", data = payload)
+if req.status_code == 200 and print(req.raise_for_status) == "None":
+    print("[{}] {}".format(req.json["id"], req.json["name"]))
+elif req.json()== None:
+    print("No result")
+else:
+    print("Not a valid JSON")
        
 
