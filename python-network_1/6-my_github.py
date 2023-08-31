@@ -16,6 +16,7 @@ password = sys.argv[2]
 
 
 req = requests.get("https://docs.github.com/en/rest/users", auth= (username,password))
-req_id = req.json["id"]
+req_json = req.json()
+req_id = req_json["id"]
 print(req_id)
 
