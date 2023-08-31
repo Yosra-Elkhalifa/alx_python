@@ -14,14 +14,19 @@ Otherwise:
 import requests
 import sys
 
-q = sys.argv[1]
+if len(sys.argv) > 1:
+    q = sys.argv[1]
+else:
+    q= ""
 
 if type(q) == 'str':
-    req = requests.post("http://0.0.0.0:5000/search_user")
-    if req.status_code == 204:
-        print("No result")
-    elif req.status_code == 500:
+    payload = {'q':q}
+    req = requests.post("http://0.0.0.0:5000/search_user", params=q)
+    if req.status_code == 200 and print(req.raise_for_status) == "None":
+        print("[]",req.json["id"], req.json["name"])
+    elif print(req.raise_for_status) != "None":
         print("Not a valid JSON")
-    else:
-        print("[{}] {}".format(req.id, req.name))
+    elif req.json()== None:
+        print("No result")
+       
 
