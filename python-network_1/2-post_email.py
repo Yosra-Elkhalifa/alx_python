@@ -10,4 +10,4 @@ url = sys.argv[1]
 email = sys.argv[2]
 payload = {'email': email}
 req = requests.post(url, params= payload)
-print("Your email is:",email)
+print("Email:",email)
