@@ -22,7 +22,7 @@ instead it works with %s
 sql_syntax = "SELECT * FROM states \
             WHERE name = {}".format(state_name_searched)
 
-cursor.execute(sql_syntax)
+cursor.execute(sql_syntax, state_name_searched)
 
 States = cursor.fetchall()
 
