@@ -15,15 +15,15 @@ connection = MySQLdb.connect(host="localhost", user=username,
 
 cursor = connection.cursor()
 
-# To pass SQL injection defined variable of type dictionary 
+# To pass SQL injection defined variable of type dictionary
 # that holds the value of state needed and refer to it using key
 
 state_name = {"state": state_name_searched}
 
 query = "SELECT * FROM states \
-            WHERE name COLLATE utf8mb4_bin = %(state)s", state_name
+            WHERE name COLLATE utf8mb4_bin = %(state)s"
 
-cursor.execute(query)
+cursor.execute(query, state_name)
 
 States = cursor.fetchall()
 
