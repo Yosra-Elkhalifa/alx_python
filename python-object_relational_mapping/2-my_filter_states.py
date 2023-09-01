@@ -16,7 +16,7 @@ connection = MySQLdb.connect(host="localhost", user=username,
 cursor = connection.cursor()
 
 cursor.execute("SELECT * FROM states \
-               WHERE name = {}".format(state_name_searched))
+               WHERE name = %s" %state_name_searched)
 
 States = cursor.fetchall()
 
