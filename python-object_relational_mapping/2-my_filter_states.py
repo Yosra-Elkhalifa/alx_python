@@ -16,7 +16,7 @@ connection = MySQLdb.connect(host="localhost", user=username,
 cursor = connection.cursor()
 
 query = "SELECT * FROM states \
-            WHERE name = '{}' ".format(state_name_searched)
+            WHERE name COLLATE utf8mb4_bin = '{}' ".format(state_name_searched)
 
 cursor.execute(query)
 
