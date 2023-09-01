@@ -4,8 +4,7 @@ which start with task 0  that has select statment
 """
 import sys
 import MySQLdb
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+
 
 
 username = sys.argv[1]
