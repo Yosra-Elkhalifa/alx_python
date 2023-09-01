@@ -9,7 +9,7 @@ username = sys.argv[1]
 password = sys.argv[2]
 database = sys.argv[3]
 
-connection = MySQLdb.connect(host="localhost", user=username, 
+connection = MySQLdb.connect(host="localhost", user=username,
                              passwd=password, db=database)
 
 cursor = connection.cursor()
