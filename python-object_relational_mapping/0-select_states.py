@@ -13,17 +13,12 @@ password = sys.argv[2]
 database = sys.argv[3]
 
 
-path = "mysql+mysqldb://{}:{}@localhost/{}".format(username, password, database)
-database = create_engine(path)
-connection = database.connect()
+connection = MySQLdb.connect(host="localhost", user = username, passwd = password, db = database )
 
+cursor = connection.cursor()
 
-session = sessionmaker(bind= database)
-session = session()
+cursor.execute("SELECT * FROM states")
 
-States = session.query(states).order_by(states.id).all()
+States= cursor.fetchall() 
 
-for state in states:
-    print(states.id, states.name)
-
-session.close()
+print(States)
