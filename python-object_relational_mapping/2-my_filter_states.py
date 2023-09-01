@@ -19,10 +19,10 @@ create variable to hold sql syntax because
 cursor.execute does not work with format which checker mandate
 instead it works with %s
 """
-sql_syntax = "SELECT * FROM states \
-            WHERE name = {}".format([state_name_searched])
+query = "SELECT * FROM states \
+            WHERE name = {}",format([state_name_searched])
 
-cursor.execute(sql_syntax)
+cursor.execute(query)
 
 States = cursor.fetchall()
 
