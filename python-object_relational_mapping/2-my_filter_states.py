@@ -14,9 +14,15 @@ connection = MySQLdb.connect(host="localhost", user=username,
                              passwd=password, db=database)
 
 cursor = connection.cursor()
+"""
+create variable to hold sql syntax because 
+cursor.execute does not work with format which checker mandate
+instead it works with %s
+"""
+sql_syntax = "SELECT * FROM states \
+            WHERE name = {}".format(state_name_searched)
 
-cursor.execute("SELECT * FROM states \
-               WHERE name = %s" %state_name_searched)
+cursor.execute(sql_syntax)
 
 States = cursor.fetchall()
 
