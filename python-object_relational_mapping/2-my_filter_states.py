@@ -20,7 +20,7 @@ cursor.execute does not work with format which checker mandate
 instead it works with %s
 """
 query = "SELECT * FROM states \
-            WHERE name = '%s' ".format(state_name_searched)
+            WHERE name = '{}' ".format(state_name_searched)
 
 cursor.execute(query)
 
