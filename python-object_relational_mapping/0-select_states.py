@@ -21,4 +21,5 @@ cursor.execute("SELECT * FROM states")
 
 States= cursor.fetchall() 
 
-print(States)
+for state in States:
+    print(state)
