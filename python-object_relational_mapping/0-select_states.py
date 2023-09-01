@@ -2,17 +2,28 @@
 This a module for Object Relational Mapping project 
 which start with task 0  that has select statment
 """
+import sys
 import MySQLdb
-import sqlalchemy
-from sqlalchemy import create_engine, MetaData
-from sqlalchemy.engine import result
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
 
-States = meta.tables["states"] 
+username = sys.argv[1]
+password = sys.argv[2]
+database = sys.argv[3]
 
-query = sqlalchemy.select(States)
 
-result = engine.execute(query).fetchall()
+path = "mysql+mysqldb://{}:{}@localhost/{}".format(username, password, database)
+database = create_engine(path)
+connection = database.connect()
 
-for record in result:
-    print("/n", record)
+
+session = sessionmaker(bind= database)
+session = session()
+
+States = session.query(states).order_by(states.id).all()
+
+for state in states:
+    print(states.id, states.name)
+
+session.close()
