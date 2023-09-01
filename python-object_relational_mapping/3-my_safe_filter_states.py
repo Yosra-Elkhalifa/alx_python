@@ -17,9 +17,11 @@ cursor = connection.cursor()
 
 query = "SELECT * FROM states \
             WHERE name COLLATE utf8mb4_bin = '%s' "
-state_tuple = (state_name_searched)
 
-cursor.execute(query, state_tuple)
+#To be safe from SQL injection passing state name as tuple and 
+# it has to be followed by comma 
+
+cursor.execute(query, (state_name_searched,))
 
 States = cursor.fetchall()
 
