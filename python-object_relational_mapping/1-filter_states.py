@@ -13,7 +13,7 @@ connection = MySQLdb.connect(host="localhost", user=username, passwd=password, d
 
 cursor = connection.cursor()
 
-cursor.execute("SELECT * FROM states WHERE name like COLLATE utf8mb4_bin 'N%' ")
+cursor.execute("SELECT * FROM states WHERE  COLLATE utf8mb4_bin name  like  'N%' ")
 
 States = cursor.fetchall() 
 
