@@ -15,11 +15,13 @@ connection = MySQLdb.connect(host="localhost", user=username,
 
 cursor = connection.cursor()
 
-query = "SELECT * FROM states \
-            WHERE name COLLATE utf8mb4_bin = %s ", (state_name_searched,)
+# To pass SQL injection defined variable of type dictionary 
+# that holds the value of state needed and refer to it using key
 
-#To be safe from SQL injection passing state name as tuple and 
-# it has to be followed by comma 
+state_name = {"state": state_name_searched}
+
+query = "SELECT * FROM states \
+            WHERE name COLLATE utf8mb4_bin = %(state)s", state_name
 
 cursor.execute(query)
 
