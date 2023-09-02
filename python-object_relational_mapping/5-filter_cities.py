@@ -24,5 +24,5 @@ cursor.execute(query, state)
 
 Cities = cursor.fetchall()
 
-for city in len(Cities):
-    print(end="{},".format(city[0]))
+city_name = [city[0] for city in Cities]
+print("{}, ".format(city_name))
