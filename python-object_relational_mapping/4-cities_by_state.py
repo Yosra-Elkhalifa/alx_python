@@ -15,8 +15,6 @@ connection = MySQLdb.connect(host="localhost", user=username,
 
 cursor = connection.cursor()
 
-
-
 query = "SELECT A.id, A.name, B.name FROM cities A,states B\
         WHERE A.state_id = B.id"
 
