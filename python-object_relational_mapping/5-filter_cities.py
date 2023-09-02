@@ -24,4 +24,5 @@ cursor.execute(query, state)
 
 Cities = cursor.fetchall()
 
-print(Cities)
+for city in Cities:
+    print(city[0])
