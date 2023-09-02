@@ -25,4 +25,4 @@ cursor.execute(query, state)
 Cities = cursor.fetchall()
 
 for city in Cities:
-    print(city[0])
+    print(city[0] , "end=,")
