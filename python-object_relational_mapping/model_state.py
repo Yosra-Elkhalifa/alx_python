@@ -23,14 +23,15 @@ connection = database.connect()
 Base = declarative_base()
 
 class States(Base):
+    '''
+    A class that inherits from Base 
+    '''
     __tablename__ = "states"
     id = Column(Integer, primary_key=True, autoincrement=True,nullable=False)
     name = Column(String(128),nullable=False)
 
     def __init__(self, name):
         self.name = name
-        
-States.__doc__ = """ A class that inherits from Base"""
 
 Base.metadata.create_all(bind-database)
 
