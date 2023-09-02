@@ -23,6 +23,6 @@ query = "SELECT name FROM cities WHERE state_id in\
 cursor.execute(query, state)
 
 Cities = cursor.fetchall()
-
+# Using list of comperhension to hold city names 
 city_name = [city[0] for city in Cities]
-print("{}, ".format(city_name))
+print(", ".join(city_name))
