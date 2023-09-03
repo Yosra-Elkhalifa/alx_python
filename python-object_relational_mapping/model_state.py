@@ -1,11 +1,5 @@
 """
 A python file that uses module SQLAlchemy and contains the class definition of a State and an instance Base = declarative_base():
-
-State class:
-- inherits from Base 
-- links to the MySQL table states
-- class attribute id that represents a column of an auto-generated, unique integer, can’t be null and is a primary key
-- class attribute name that represents a column of a string with maximum 128 characters and can’t be null
 """
 import sys
 from sqlalchemy import create_engine
@@ -42,5 +36,5 @@ class State(Base):
    def __init__(self, name):
         self.name = name
 
-Base.metadata.create_all(bind-database)
+# Base.metadata.create_all(bind-database)
 
