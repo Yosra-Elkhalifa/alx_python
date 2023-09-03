@@ -25,10 +25,15 @@ Base = declarative_base()
 class State(Base):
    """
    State class:
-    - inherits from Base 
-    - links to the MySQL table states
-    - class attribute id that represents a column of an auto-generated, unique integer, can’t be null and is a primary key
-    - class attribute name that represents a column of a string with maximum 128 characters and can’t be null
+
+   Attributes:
+
+   - id: of type integar and constitute the primary key 
+   - name: of type string and represents the name of state
+
+   Args:
+
+   - Base : instance of declarative_base
    """
    __tablename__ = "states"
    id = Column(Integer, primary_key=True, autoincrement=True,nullable=False)
