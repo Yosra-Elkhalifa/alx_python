@@ -1,18 +1,5 @@
-"""
-A python file that uses module SQLAlchemy and contains the class definition of a State and an instance Base = declarative_base():
-"""
-import sys
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, Column, Integer, String, Numeric
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, String, Numeric
-
-username = sys.argv[1]
-password = sys.argv[2]
-database = sys.argv[3]
-
-path = "mysql+mysqldb://{}:{}@localhost/{}".format(username, password, database)
-database = create_engine(path) 
-connection = database.connect()
 
 Base = declarative_base()
 
@@ -36,5 +23,5 @@ class State(Base):
    def __init__(self, name):
         self.name = name
 
-# Base.metadata.create_all(bind-database)
+
 
