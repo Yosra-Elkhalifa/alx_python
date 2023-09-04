@@ -9,12 +9,13 @@ database = sys.argv[3]
 
 path = "mysql+mysqldb://{}:{}@localhost/{}".format(username, password, database)
 database = create_engine(path)
+
 Base.metadata.create_all(bind=database)
 
 Session = sessionmaker(bind=database)
 session = Session()
 
-states = session.query(State).all
+states = session.query(State).all()
 
 for state in states:
     print("{}: {}".format(state.id, state.name))
