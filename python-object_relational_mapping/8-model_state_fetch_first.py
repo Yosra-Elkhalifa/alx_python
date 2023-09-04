@@ -16,7 +16,7 @@ Base.metadata.create_all(bind=database)
 Session = sessionmaker(bind=database)
 session = Session()
 
-states = session.query(State).all()
+states = session.query(State).first()
 
 for state in states:
     print("{}: {}".format(state.id[0], state.name[0]))
