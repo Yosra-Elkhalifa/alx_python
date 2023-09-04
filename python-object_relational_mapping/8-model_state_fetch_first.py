@@ -18,7 +18,9 @@ session = Session()
 
 states = session.query(State).first()
 
-for state in states:
-    print("{}: {}".format(state.id[0], state.name[0]))
+if states:
+    print("{}: {}".format(states.id, states.name))
+else:
+    print("Nothing")
 
 session.close()
