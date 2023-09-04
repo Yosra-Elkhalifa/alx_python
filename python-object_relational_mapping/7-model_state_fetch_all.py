@@ -7,7 +7,8 @@ username = sys.argv[1]
 password = sys.argv[2]
 database = sys.argv[3]
 
-path = "mysql+mysqldb://{}:{}@localhost/{}".format(username, password, database)
+path = "mysql+mysqldb://{}:{}@localhost/{}".format(
+    username, password, database)
 database = create_engine(path)
 
 Base.metadata.create_all(bind=database)
