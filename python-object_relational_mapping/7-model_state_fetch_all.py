@@ -1,6 +1,20 @@
-from model_state import Base, State
+import sys
+from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from model_state import Base, State
 
-query = session.query(State.id, State.name)
+username = sys.argv[1]
+password = sys.argv[2]
+database = sys.argv[3]
 
-result = query().all()
+path = "mysql+mysqldb://{}:{}@localhost/{}".format(username, password, database)
+database = create_engine(path) 
+connection = database.connect()
+
+Session = sessionmaker(bind= database)
+session = Session()
+
+states = session.query(State).all
+
+for state in states:
+    print("{}: {}".format(state.id,state.name))
